@@ -79,7 +79,7 @@ form{
     width: 75%;
     border: 2px solid black;
     border-radius: 4px;
-    padding: 4%;
+    padding: 3%;
     color: white;
     font-size: clamp(8px, 4vw, 1rem);
     font-weight: 700;

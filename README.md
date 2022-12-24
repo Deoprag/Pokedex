@@ -1,5 +1,6 @@
 # Pokedex
 Pokedex feita em HTML, CSS e JS com a utilização da API Pokeapi
+
 Deploy: https://pokedex-deoprag.vercel.app/
 
 ## Funcionalidades:

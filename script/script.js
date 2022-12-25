@@ -56,6 +56,7 @@ const renderPokemon = async (pokemon) => {
         pokemonName.innerHTML = 'Not found';
         pokemonNumber.innerHTML = 'ERROR';
         pokemonImage.src = "./assets/warning.png"
+        input.value = '';
     }
 }
 
@@ -65,14 +66,20 @@ form.addEventListener('submit', (event) => {
 });
 
 function prevPokemon(){
-    if(searchPokemon > 1){
+    if((searchPokemon > 1 && searchPokemon < 906) || (searchPokemon > 10000) ){
+        if(searchPokemon == 10001){
+            searchPokemon = 906;
+        }
         searchPokemon -= 1;
         renderPokemon(searchPokemon);
     }
 }
 
 function nextPokemon(){
-    if(searchPokemon < 905){
+    if(searchPokemon < 906 || (searchPokemon > 10000 && searchPokemon < 10249)){
+        if(searchPokemon == 905){
+            searchPokemon = 10000;
+        }
         searchPokemon += 1;
         renderPokemon(searchPokemon);;
     }

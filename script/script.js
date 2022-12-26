@@ -6,6 +6,8 @@ const pokemonType1 = document.querySelector('.pokemon-type-1');
 const pokemonType2 = document.querySelector('.pokemon-type-2');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input-search');
+const arrayType = ["bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost","grass","ground","ice","normal","poison","psychic","rock","steel","water"];
+const arrayTypeColors = ["#1c4b27","#040706","#448b95","#e3e32b","#971a42","#994025","#ab1f23","#4a677d","#33336b","#147b3d","#a9702c","#86d2f5","#75515b","#5e2d88","#a42a6c","#48180a","#5f756d","#1552e2"];
 
 let searchPokemon = 1;
 
@@ -32,9 +34,19 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.style.transform = "translate(0,0)";
         searchPokemon = data.id;
         pokemonType1.innerHTML = data['types']['0']['type']['name'];
+        arrayType.forEach((item, index) => {
+            if(data['types']['0']['type']['name'] === item){
+                pokemonType1.style.background = arrayTypeColors[index];
+            }
+        });
         try{
             pokemonType2.style.display = 'block';
             pokemonType2.innerHTML = data['types']['1']['type']['name'];
+            arrayType.forEach((item, index) => {
+                if(data['types']['1']['type']['name'] === item){
+                    pokemonType2.style.background = arrayTypeColors[index];
+                }
+            });
         } catch (e){
             type.style.left = '33%';
             pokemonType2.style.display = 'none';

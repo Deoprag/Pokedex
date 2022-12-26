@@ -11,11 +11,11 @@ Deploy: https://pokedex-deoprag.vercel.app/
 ## Demonstração
 - Inicio
 
-![image](https://user-images.githubusercontent.com/85528447/209443342-efd87953-19d5-4027-b258-5f220effca6d.png)
+![image](https://user-images.githubusercontent.com/85528447/209487121-959ce76f-7683-4d40-92cf-ebd39be593b9.png)
 
 - Pesquisado com Sucesso
 
-![image](https://user-images.githubusercontent.com/85528447/209443406-6304de3f-0ef5-4d98-a4d7-15ef91c81582.png)
+![image](https://user-images.githubusercontent.com/85528447/209487149-08887749-8cb1-47c5-b7de-d548444ddc3e.png)
 
 - Erro ao pesquisar
 
